@@ -9,7 +9,6 @@ public class UIMan : MonoBehaviour
 
     public GameObject startMenu;
     public InputField userName;
-    public InputField pass;
 
     private void Awake()
     {

@@ -22,8 +22,7 @@ public class gameController : MonoBehaviour
     {
         Time.timeScale = 0;
         p1Score = 0;
-        p2Score = 0;
-        Instantiate(pong, pongSpawn.transform.position, pongSpawn.transform.rotation);
+      
         
     }
 
