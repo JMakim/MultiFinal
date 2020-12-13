@@ -13,13 +13,18 @@ public class gameController : MonoBehaviour
     public GameObject win2;
     public GameObject pong;
     public GameObject pongSpawn;
+    public GameObject menu;
+
+    public bool start = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 0;
         p1Score = 0;
         p2Score = 0;
         Instantiate(pong, pongSpawn.transform.position, pongSpawn.transform.rotation);
+        
     }
 
     // Update is called once per frame
@@ -28,6 +33,19 @@ public class gameController : MonoBehaviour
         p1ScoreText.text = p1Score.ToString();
         p2ScoreText.text = p2Score.ToString();
         winCon();
+
+        if(start == true)
+        {
+            startGame();
+            start = false;
+        }
+        
+    }
+
+    public void startGame()
+    {
+        menu.SetActive(false);
+        Time.timeScale = 1;
     }
 
     public void winCon()

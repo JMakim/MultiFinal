@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    //public GameObject cube;
-    public NetworkMan netMan;
-    Vector3 positionVector3;
+
 
     public float speed = 5;
     public Rigidbody2D rb;
@@ -33,14 +31,7 @@ public class PlayerController : MonoBehaviour
 
         rb = gameObject.GetComponent<Rigidbody2D>();
 
-        //SendPos();
-        //InvokeRepeating("SendPos", 1, 0.033f);
-        
     }
-
-
-
-
     void Update()
     {
         Movement();
@@ -65,11 +56,4 @@ public class PlayerController : MonoBehaviour
             x.transform.Translate(Vector2.down * speed * Time.deltaTime);
     }
 
-    //public void SendPos()
-    //{
-    //    //positionVector3 = gameObject.transform.position;
-    //    //rotationVector3 = gameObject.transform.rotation.eulerAngles;
-
-    //    netMan.SendPosition(positionVector3);
-    //}
 }
